@@ -1,0 +1,60 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:orientation="vertical"
+           android:layout_height="match_parent">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="200dp"
+               android:background="@color/teal_200"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:text="TRENDING"
+               android:layout_marginTop="10sp"
+               android:textSize="30sp"
+               android:textStyle="bold"
+               android:textColor="#C62828"
+               android:layout_height="match_parent"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:background="@color/black"
+               android:layout_height="200sp">
+               <androidx.recyclerview.widget.RecyclerView
+                   android:layout_width="match_parent"
+                   android:id="@+id/rc_view_trending_list"
+                   android:layout_height="match_parent"/>
+           </LinearLayout>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:text="ORIGINALS"
+               android:layout_marginTop="10sp"
+               android:textSize="30sp"
+               android:textStyle="bold"
+               android:textColor="#C62828"
+               android:layout_height="match_parent"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="200sp"
+               android:background="@color/teal_200">
+               <androidx.recyclerview.widget.RecyclerView
+                   android:layout_width="match_parent"
+                   android:id="@+id/rc_view_originals_list"
+                   android:layout_height="match_parent"/>
+           </LinearLayout>
+       </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

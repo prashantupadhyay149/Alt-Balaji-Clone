@@ -1,0 +1,26 @@
+<androidx.cardview.widget.CardView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/original_list"
+        android:scaleType="fitXY"
+        android:visibility="visible"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"/>
+      <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/original_list_shimmer_container"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/original_list_shimmer"
+            android:scaleType="fitXY"
+            android:background="#DDDDDD"
+            />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</androidx.cardview.widget.CardView>
