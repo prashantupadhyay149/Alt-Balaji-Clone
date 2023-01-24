@@ -39,13 +39,14 @@ public class OriginalAdapter extends RecyclerView.Adapter<OriginalAdapter.MyView
         holder.imageView.setVisibility( View.GONE );
         holder.shimmerImage.setVisibility( View.VISIBLE );
         holder.shimmerFrameLayout.startShimmer();
-        Picasso.get()
-                .load( Uri.parse( arrayList.get( i ).getOriginalImageUrls() ) )
-                .into(holder.imageView  );
+
         new Handler().postDelayed( new Runnable() {
             @Override
             public void run() {
                 holder.shimmerFrameLayout.stopShimmer();
+                Picasso.get()
+                        .load( Uri.parse( arrayList.get( i ).getOriginalImageUrls() ) )
+                        .into(holder.imageView  );
                 holder.imageView.setVisibility( View.VISIBLE );
                 holder.shimmerImage.setVisibility( View.GONE );
 
@@ -56,7 +57,7 @@ public class OriginalAdapter extends RecyclerView.Adapter<OriginalAdapter.MyView
 
     @Override
     public int getItemCount() {
-        return 0;
+        return arrayList.size();
     }
 
     public class MyView extends RecyclerView.ViewHolder {

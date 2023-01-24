@@ -62,9 +62,9 @@ public class MainActivity extends AppCompatActivity {
         TrendingAdapter trendingAdapter = new TrendingAdapter(getApplicationContext(),TrendingModelArrayList);
         trendingRecyclerView.setLayoutManager( new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false) );
         trendingRecyclerView.setAdapter(trendingAdapter);
-     //   OriginalAdapter originalAdapter=new OriginalAdapter( getApplicationContext(),OriginalModelArrayList );
+        OriginalAdapter originalAdapter=new OriginalAdapter( getApplicationContext(),OriginalModelArrayList );
         originalRecyclerView.setLayoutManager( new LinearLayoutManager( getApplicationContext(),LinearLayoutManager.HORIZONTAL,false));
-        originalRecyclerView.setAdapter( trendingAdapter);
+        originalRecyclerView.setAdapter(originalAdapter);
 //        String[] Output = new String[]{
 //                OriginalModelArrayList.get(0).getOriginalImageUrls(),
 //                OriginalModelArrayList.get(1).getOriginalImageUrls(),
